@@ -2,9 +2,10 @@
 An opportunity to explore how to make an EV3 Robot make sounds.
 
 Authors: Dave Fisher, David Mutchler, Vibha Alangar,
-         their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues, and Henry.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
+import rosebotics as rb
 
 # ------------------------------------------------------------------------------
 # TODO: 2.
@@ -13,6 +14,8 @@ Authors: Dave Fisher, David Mutchler, Vibha Alangar,
 # ------------------------------------------------------------------------------
 
 def main():
+
+
     fun_song = [(392, 350, 100), (392, 350, 100), (392, 350, 100),
                 (311.1, 250, 100), (466.2, 25, 100), (392, 350, 100),
                 (311.1, 250, 100), (466.2, 25, 100), (392, 700, 100),
@@ -35,6 +38,8 @@ def main():
                 (466.16, 50, 400), (311.13, 25, 200), (392, 350, 100),
                 (311.13, 250, 100), (466.16, 25, 100), (392.00, 300, 150),
                 (311.13, 250, 100), (466.16, 25, 100), (392, 700)]
-
+    for k in range(1000):
+        beep = rb.Tone(k + 100, 50)
+        beep.play()
 
 main()
